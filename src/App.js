@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import PersonCard from "./components/PersonCard";
 
@@ -28,11 +29,9 @@ function App() {
       hairColor: " Brown",
     },
   ];
-  console.log(personInfo);
   return (
     <div>
       {personInfo.map((person, i) => {
-        console.log(person);
         return <PersonCard key={i} person={person} />;
       })}
     </div>
